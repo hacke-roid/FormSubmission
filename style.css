@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center;
+    justify-content: center; */
+    height: 100vh;
+    background-color: lightblue;
+}
+
+.student-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    /* border: 1px solid black; */
+    height: 50px;
+    background-color: goldenrod;
+    border-radius: 10px;
+    
+}
+
+.student-btn>button{
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 10px;
+    /* float: right; */
+}
+
+.page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-btn>button:hover{
+    background-color: aqua;
+    transition-delay: 2ms;
+    /* transition-property: 2; */
+}
+
+form{
+    background-color: azure;
+    /* margin: 20px; */
+    width: 600px;
+    border-radius: 20px;
+    box-shadow: rgb(197, 159, 159);
+    margin: 0 auto 20px auto;
+    display: grid;
+}
+
+form label{
+    display: grid;
+    justify-content: space-evenly;
+    margin-bottom: 5px ;
+    font-weight: bold;
+    align-items: center;
+    margin: 10px;    
+}
+
+
+form input[type="text"],
+form input[type="email"] {
+    /* width: 100%; */
+    align-self: center !important;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 20px 0 20px;
+}
+
+
+.add-btn{
+    background-color: goldenrod;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

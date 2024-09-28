@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Data</title>
+    <link rel="stylesheet" href="./indexForm.css" />
+  </head>
+  <body>
+    <div class="container">
+    <h2>Student Data List</h2>
+    <div class="clear-btn">
+      <button id="clearData">Clear Student data</button>
+    </div>
+
+    <table border="2" bgcolor="azure" align="center">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Student ID</th>
+          <th>Course</th>
+          <th>Email ID</th>
+          <th>Phone No.</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody">
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tableBody = document.getElementById("studentTableBody");
+
+        const savedStudents =
+          JSON.parse(localStorage.getItem("students")) || [];
+
+        savedStudents.forEach((student) => {
+          const newRow = tableBody.insertRow();
+          newRow.insertCell(0).innerText = student.firstname;
+          newRow.insertCell(1).innerText = student.lastname;
+          newRow.insertCell(2).innerText = student.studentId;
+          newRow.insertCell(3).innerText = student.course;
+          newRow.insertCell(4).innerText = student.email;
+          newRow.insertCell(5).innerText = student.phone;
+        });
+      });
+
+      document
+        .getElementById("clearData")
+        .addEventListener("click", function () {
+          const userConfirm = confirm("Are you sure you want");
+          if (userConfirm) {
+            localStorage.removeItem("students");
+            window.location.reload(); // Reload the page to clear the table data.
+          } else {
+            alert("Operation cancelled");
+          }
+        });
+    </script>
+  </body>
+</html>

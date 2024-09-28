@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="student-btn">
+        <button onclick="reload()">Student List</button>
+        <button id="studentDataSaved">Student Data</button>
+    </div>
+
+    <div class="page">
+        <form id="Student-Form">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" placeholder="Enter First Name" required>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" placeholder="Enter Last Name" required>
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" required placeholder="Enter Student ID">
+            <label for="course">Course:</label>
+            <input type="text" id="course" required placeholder="Enter Course">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" required placeholder="Enter EmailID">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" required placeholder="Enter Phone Number">
+            <br>
+            <button type="submit" class="add-btn">Add Student</button>
+        </form>
+    </div>
+
+    <script src="./App.js"></script>
+</body>
+</html>
